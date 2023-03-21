@@ -1,26 +1,15 @@
 #include "main.h"
 /**
- * print_sign - function that prints signs
+ * _isalpha - function that checks for alaphabet
  *
- * @n: function parameter
- * Return: 1 ,0 and -1
+ * @c: function parameter
+ * Return: 1 if it is an alphabet and 0 if otherwise
  */
 
-int print_sign(int n)
+int _isalpha(int c)
 {
-	if (n > 0)
-	{
-		_putchar('+');
+	if ((c >= 'a' && c <= 'z') || (c <= 'A' && c >= 'Z'))
 		return (1);
-	}
-	else if (n == 0)
-	{
-		_putchar('0');
-		return (0);
-	}
 	else
-	{
-		_putchar('-');
-		return (-1);
-	}
+		return (0);
 }
