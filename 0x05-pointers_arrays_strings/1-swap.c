@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - function that returns length of a string
+ * swap_int - function that returns length of a string
  * @a: input
  * @b: input
  * Return:n
