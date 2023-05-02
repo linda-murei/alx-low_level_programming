@@ -1,15 +1,15 @@
 #include "lists.h"
 /**
- * insert_nodeint_at_index - inserts node to list
- * @head: head of the list
- * @index: index to insert new node
+ * insert_nodeint_at_index - add node to list
+ * @head: of the list
+ * @index: index to put new node
  * @n: int to_store_in node
  *
- * Return:  pointer to new node or NULL
+ * Return:  new node, NULL if failed :c
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n)
 {
-	unsigned int l;
+	unsigned int i;
 	listint_t *tmpnode, *new;
 
 	if (head == NULL)
@@ -31,10 +31,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n)
 		return (new);
 	}
 
-	l = 1, index++, tmpnode = *head;
-	while (l < index - 1 && tmpnode->next != NULL)
-		tmpnode = tmpnode->next,	l++;
-	if (l != index - 1)
+	i = 1, index++, tmpnode = *head;
+	while (i < index - 1 && tmpnode->next != NULL)
+		tmpnode = tmpnode->next,	i++;
+	if (i != index - 1)
 	{
 		return (NULL);
 	}
